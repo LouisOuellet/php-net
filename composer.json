@@ -1,0 +1,21 @@
+{
+    "name": "laswitchtech/php-net",
+    "description": "Network Tools Library for PHP",
+    "type": "library",
+    "license": "GPL-3.0-only",
+    "autoload": {
+        "psr-4": {
+            "LaswitchTech\\phpNet\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Louis Ouellet",
+            "email": "louis_ouellet@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "laswitchtech/php-logger": "^1.1"
+    }
+}

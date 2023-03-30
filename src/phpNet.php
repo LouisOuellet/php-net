@@ -3,6 +3,9 @@
 //Declaring namespace
 namespace LaswitchTech\phpNet;
 
+//Import phpConfigurator class into the global namespace
+use LaswitchTech\phpConfigurator\phpConfigurator;
+
 //Import phpLogger class into the global namespace
 use LaswitchTech\phpLogger\phpLogger;
 
@@ -114,7 +117,7 @@ class phpNet {
 	// Logger
 	private $Logger;
 	private $Level = 1;
-	
+
   private $RootPath = null;
 
   /**
@@ -141,6 +144,12 @@ class phpNet {
     if(defined("ROOT_PATH")){
       $this->RootPath = ROOT_PATH;
     }
+
+    // Initialize Configurator
+    $this->Configurator = new phpConfigurator('netools');
+
+    // Retrieve Log Level
+    $this->Level = $this->Configurator->get('logger', 'level') ?: $this->Level;
 
     // Initiate phpLogger
     $this->Logger = new phpLogger('netools');

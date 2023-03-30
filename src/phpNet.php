@@ -141,11 +141,6 @@ class phpNet {
 
     // Initiate phpLogger
     $this->Logger = new phpLogger('netools');
-
-    // Configure phpLogger
-    $this->Logger->config('ip',true);
-    $this->Logger->config('rotation',false);
-    $this->Logger->config('level',$this->Level);
   }
 
   /**

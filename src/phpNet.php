@@ -114,6 +114,8 @@ class phpNet {
 	// Logger
 	private $Logger;
 	private $Level = 1;
+	
+  private $RootPath = null;
 
   /**
    * Create a new phpNet instance.
@@ -127,8 +129,21 @@ class phpNet {
    */
   public function __construct() {
 
+		// Set RootPath according to this file
+    $this->RootPath = realpath(getcwd());
+
+    // If server document_root is available, use it instead
+    if(isset($_SERVER['DOCUMENT_ROOT']) && !empty($_SERVER['DOCUMENT_ROOT'])){
+      $this->RootPath = dirname($_SERVER['DOCUMENT_ROOT']);
+    }
+
+    // If constant ROOT_PATH has been set
+    if(defined("ROOT_PATH")){
+      $this->RootPath = ROOT_PATH;
+    }
+
     // Initiate phpLogger
-    $this->Logger = new phpLogger(['database' => 'log/database.log']);
+    $this->Logger = new phpLogger('netools');
 
     // Configure phpLogger
     $this->Logger->config('ip',true);

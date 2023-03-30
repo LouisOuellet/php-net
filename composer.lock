@@ -7,18 +7,58 @@
     "content-hash": "4334f23b030451a054b022ef06b7c790",
     "packages": [
         {
-            "name": "laswitchtech/php-logger",
-            "version": "v1.1.3",
+            "name": "laswitchtech/php-configurator",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/LouisOuellet/php-logger.git",
-                "reference": "711d6e90c727cca938cb7395f24f18d47f3a6f09"
+                "url": "https://github.com/LouisOuellet/php-configurator.git",
+                "reference": "409894b736933a3fc7bbb3ba6adb96a846c8ed1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LouisOuellet/php-logger/zipball/711d6e90c727cca938cb7395f24f18d47f3a6f09",
-                "reference": "711d6e90c727cca938cb7395f24f18d47f3a6f09",
+                "url": "https://api.github.com/repos/LouisOuellet/php-configurator/zipball/409894b736933a3fc7bbb3ba6adb96a846c8ed1a",
+                "reference": "409894b736933a3fc7bbb3ba6adb96a846c8ed1a",
                 "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LaswitchTech\\phpConfigurator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Louis Ouellet",
+                    "email": "louis_ouellet@hotmail.com"
+                }
+            ],
+            "description": "Configurator Library for PHP Applications",
+            "support": {
+                "issues": "https://github.com/LouisOuellet/php-configurator/issues",
+                "source": "https://github.com/LouisOuellet/php-configurator/tree/v1.0.1"
+            },
+            "time": "2023-03-30T18:58:12+00:00"
+        },
+        {
+            "name": "laswitchtech/php-logger",
+            "version": "v1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LouisOuellet/php-logger.git",
+                "reference": "851ca6d6aa698f9609c9864875cb04fbc1181ca0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LouisOuellet/php-logger/zipball/851ca6d6aa698f9609c9864875cb04fbc1181ca0",
+                "reference": "851ca6d6aa698f9609c9864875cb04fbc1181ca0",
+                "shasum": ""
+            },
+            "require": {
+                "laswitchtech/php-configurator": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -39,9 +79,9 @@
             "description": "Easy to use logging library for PHP",
             "support": {
                 "issues": "https://github.com/LouisOuellet/php-logger/issues",
-                "source": "https://github.com/LouisOuellet/php-logger/tree/v1.1.3"
+                "source": "https://github.com/LouisOuellet/php-logger/tree/v1.2.4"
             },
-            "time": "2023-03-20T12:34:16+00:00"
+            "time": "2023-03-30T19:19:57+00:00"
         }
     ],
     "packages-dev": [],
